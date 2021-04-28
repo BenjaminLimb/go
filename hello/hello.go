@@ -31,6 +31,15 @@ func main (){
 	log.Println("Call greetings.Hello with \"Gladys\"")
 	greet("Gladys")
 
+	// A slice of names.
+	names := []string{"Benjamin", "Madison", "Joseph", "Matthew"}
+	messages, err := greetings.Hellos(names)
+	if err !=nil{
+		log.Fatal(err)
+	}
+
+	fmt.Println(messages)
+
 	log.Println("Call greetings.Hello with \"\"")
 	greet("")
 
